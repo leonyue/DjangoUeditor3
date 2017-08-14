@@ -13,7 +13,7 @@ UEditorSettings = {
     "toolbars": TOOLBARS_SETTINGS["normal"],
     "autoFloatEnabled": False,
     # 默认保存上传文件的命名方式
-    "defaultPathFormat": "%(basename)s_%(datetime)s_%(rnd)s.%(extname)s"
+    # "defaultPathFormat": "%(basename)s_%(datetime)s_%(rnd)s.%(extname)s" // leon yue abandon this
 }
 # 请参阅php文件夹里面的config.json进行配置
 UEditorUploadSettings = {
@@ -22,7 +22,7 @@ UEditorUploadSettings = {
     "imageMaxSize": 10485760,  # 上传大小限制，单位B,10M
     "imageFieldName": "upfile",  # * 提交的图片表单名称 */
     "imageUrlPrefix": "",
-    "imagePathFormat": "",
+    "imagePathFormat": "upload/image/%(year)s/%(month)s/%(day)s/%(time)s_%(rnd)s.%(extname)s",
     "imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"],  # 上传图片格式显示
 
     # 涂鸦图片上传配置项 */
@@ -30,7 +30,7 @@ UEditorUploadSettings = {
     "scrawlFieldName": "upfile",  # 提交的图片表单名称 */
     "scrawlMaxSize": 10485760,  # 上传大小限制，单位B  10M
     "scrawlUrlPrefix": "",
-    "scrawlPathFormat": "",
+    "scrawlPathFormat": "scrawl/%(year)s/%(month)s/%(day)s/%(time)s_%(rnd)s.%(extname)s",
 
     # 截图工具上传 */
     "snapscreenActionName": "uploadimage",  # 执行上传截图的action名称 */
@@ -48,7 +48,7 @@ UEditorUploadSettings = {
     "catcherUrlPrefix": "",
     # 上传视频配置 */
     "videoActionName": "uploadvideo",  # 执行上传视频的action名称 */
-    "videoPathFormat": "",
+    "videoPathFormat": "upload/video/%(year)s/%(month)s/%(day)s/%(time)s_%(rnd)s.%(extname)s",
     "videoFieldName": "upfile",  # 提交的视频表单名称 */
     "videoMaxSize": 102400000,  # 上传大小限制，单位B，默认100MB */
     "videoUrlPrefix": "",
@@ -58,7 +58,7 @@ UEditorUploadSettings = {
 
     # 上传文件配置 */
     "fileActionName": "uploadfile",  # controller里,执行上传视频的action名称 */
-    "filePathFormat": "",
+    "filePathFormat": "upload/file/%(year)s/%(month)s/%(day)s/%(time)s_%(rnd)s.%(extname)s",
     "fileFieldName": "upfile",  # 提交的文件表单名称 */
     "fileMaxSize": 204800000,  # 上传大小限制，单位B，200MB */
     "fileUrlPrefix": "",  # 文件访问路径前缀 */
